@@ -191,6 +191,7 @@
     
     <br><br>
 
+    <button onclick="togglePlayPause()">Play/Pause Music</button>
 
 
 
@@ -218,10 +219,23 @@
 
 <h3 id="zswed">equalizer </h3> – A couple dance is a form of social dancing where two partners move together in coordination with music.
 
-<audio id="myAudio" autoplay loop>
+<audio id="myAudio" loop>
     <source src="Family Party Full Video Song _ MCA Movie Songs _ Nani _ Sai Pallavi _ DSP _ Dil Raju _Mango Music.webm" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
+  
+  
+  <script>
+    var audio = document.getElementById("myAudio");
+  
+    function togglePlayPause() {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
   
      
                     
@@ -243,26 +257,7 @@ Vajinepalli Ramulu Garu
     
 </ul>
                         
-<script>
-    
-var audio = document.getElementById("audio");
-var toggleButton = document.getElementById("toggleButton");
 
-toggleButton.addEventListener("click", function() {
-    if (audio.paused) {
-        audio.play();
-        toggleButton.textContent = "Pause";
-    } else {
-        audio.pause();
-        toggleButton.textContent = "Play";
-    }
-});
-
-
-
-audio.play();
-</script>
-   
     </div>
     <footer>
         <p>&copy; NKV Harshvardhan</p>
