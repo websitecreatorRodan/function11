@@ -216,14 +216,14 @@
 
 
 
-<h3 id="zswed">equalizer </h3> – 
+<h3 id="zswed">equalizer </h3> – A couple dance is a form of social dancing where two partners move together in coordination with music.
 
-<audio id="audio" src="Family Party Full Video Song _ MCA Movie Songs _ Nani _ Sai Pallavi _ DSP _ Dil Raju _Mango Music.webm"></audio>
-<div class="canvas-container">
-<canvas id="equalizer" width="400" height="100"></canvas>
-</div>
-<button id="toggleButton" id="">Play/Pause</button>
-
+<audio id="myAudio" autoplay loop>
+    <source src="Family Party Full Video Song _ MCA Movie Songs _ Nani _ Sai Pallavi _ DSP _ Dil Raju _Mango Music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+     
                     
 
                         <h2 id="zswed">Invited by</h2>
@@ -242,7 +242,9 @@ Vajinepalli Ramulu Garu
     
     
 </ul>
-          <script>              
+                        
+<script>
+    
 var audio = document.getElementById("audio");
 var toggleButton = document.getElementById("toggleButton");
 
@@ -255,57 +257,7 @@ toggleButton.addEventListener("click", function() {
         toggleButton.textContent = "Play";
     }
 });
-
-
-
-        // Get the audio element and canvas
-var audio = document.getElementById("audio");
-var canvas = document.getElementById("equalizer");
-var ctx = canvas.getContext("2d");
-
-// Create the analyser node
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var analyser = audioCtx.createAnalyser();
-var source = audioCtx.createMediaElementSource(audio);
-source.connect(analyser);
-analyser.connect(audioCtx.destination);
-
-// Set up the analyser
-analyser.fftSize = 256;
-var bufferLength = analyser.frequencyBinCount;
-var dataArray = new Uint8Array(bufferLength);
-
-// Draw the equalizer
-function drawEqualizer() {
-    requestAnimationFrame(drawEqualizer);
-
-    analyser.getByteFrequencyData(dataArray);
-
-    ctx.fillStyle = "black";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    var barWidth = (canvas.width / bufferLength) * 2.5;
-    var barHeight;
-    var x = 0;
-
-    for(var i = 0; i < bufferLength; i++) {
-        barHeight = dataArray[i] / 2;
-
-        ctx.fillStyle = "rgb(" + (barHeight + 100) + ",50,50)";
-        ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
-
-        x += barWidth + 1;
-    }
-}
-
-// Start drawing the equalizer
-drawEqualizer();
-
-// Play the audio
-audio.play();
-
-
-    </script>
+</script>
    
     </div>
     <footer>
