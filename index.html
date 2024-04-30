@@ -172,7 +172,23 @@
             margin-right: 20px;
         }
 
-  
+        #ddddd{
+  background-color: #FFDAB9; /* Peach color */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Cursor style */
+  outline: none; /* Remove outline */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Hover effect */
+#ddddd{
+  background-color: #FFB6C1; /* Lighter peach color on hover */
+}
         </style>
 
 
@@ -191,12 +207,8 @@
     
     <br><br>
 
-    <audio id="audio" src="Family Party Full Video Song _ MCA Movie Songs _ Nani _ Sai Pallavi _ DSP _ Dil Raju _Mango Music.webm"></audio>
-    <div class="canvas-container">
-    <canvas id="equalizer" width="400" height="100"></canvas>
-    </div>
-    <button id="toggleButton" id="">Play/Pause</button>
 
+    <button id="ddddd" onclick="togglePlayPause()">Play/Pause Music</button>
 
 
 <ul  id="zxcvfdsa"  class="shadowed-text">
@@ -221,70 +233,24 @@
 
 
 
+<h3 id="zswed">equalizer </h3> – A couple dance is a form of social dancing where two partners move together in coordination with music.
 
+<audio id="myAudio" loop>
+    <source src="Family Party Full Video Song _ MCA Movie Songs _ Nani _ Sai Pallavi _ DSP _ Dil Raju _Mango Music.webm" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
   
   <script>
- var audio = document.getElementById("audio");
-var toggleButton = document.getElementById("toggleButton");
-
-toggleButton.addEventListener("click", function() {
-    if (audio.paused) {
+    var audio = document.getElementById("myAudio");
+  
+    function togglePlayPause() {
+      if (audio.paused) {
         audio.play();
-        toggleButton.textContent = "Pause";
-    } else {
+      } else {
         audio.pause();
-        toggleButton.textContent = "Play";
+      }
     }
-});
-
-
-
-        // Get the audio element and canvas
-var audio = document.getElementById("audio");
-var canvas = document.getElementById("equalizer");
-var ctx = canvas.getContext("2d");
-
-// Create the analyser node
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var analyser = audioCtx.createAnalyser();
-var source = audioCtx.createMediaElementSource(audio);
-source.connect(analyser);
-analyser.connect(audioCtx.destination);
-
-// Set up the analyser
-analyser.fftSize = 256;
-var bufferLength = analyser.frequencyBinCount;
-var dataArray = new Uint8Array(bufferLength);
-
-// Draw the equalizer
-function drawEqualizer() {
-    requestAnimationFrame(drawEqualizer);
-
-    analyser.getByteFrequencyData(dataArray);
-
-    ctx.fillStyle = "black";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    var barWidth = (canvas.width / bufferLength) * 2.5;
-    var barHeight;
-    var x = 0;
-
-    for(var i = 0; i < bufferLength; i++) {
-        barHeight = dataArray[i] / 2;
-
-        ctx.fillStyle = "rgb(" + (barHeight + 100) + ",50,50)";
-        ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
-
-        x += barWidth + 1;
-    }
-}
-
-// Start drawing the equalizer
-drawEqualizer();
-
-
-
-
   </script>
   
      
@@ -309,6 +275,8 @@ Vajinepalli Ramulu Garu
                         
 
     </div>
-    
+    <footer>
+        <p>&copy; NKV Harshvardhan</p>
+    </footer>
 </body>
 </html>
