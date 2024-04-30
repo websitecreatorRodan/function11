@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+    <title>Your Name - Official Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-image: url('https://wallpaper.dog/large/10857274.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Ensure the background stays fixed while scrolling */
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        main {
+            text-align: justify;
+            padding: 20px; /* Add padding to keep content away from edges */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+
+#toggleButton{
+    font-family: "Gruppo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  background-color: black;
+  color: yellow;
+}
+
+
+#equalizer {
+   width: 100%; /* Make the canvas fill its container's width */
+    height: auto; /* Automatically adjust height based on width */
+}
+  
+.uncopyable {
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+        }
+
+    </style>
+</head>
+<body>
+    <div id="uncopyable">
+    <header>
+        <h1>Rodan 5000's</h1>
+        <p>Official Website</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi, I'm Rodan_5000 in the technical world. Currently, I'm a student at Narayana Olympiad School, pursuing my passion for technology and computer science.</p>
+            <p>My goal is to become an AWS Engineer, leveraging my skills in cloud computing and infrastructure management to design and deploy scalable, reliable, and cost-effective solutions for businesses.</p>
+            <p>Throughout my academic journey, I've been actively involved in various tech-related projects and competitions, honing my skills in programming, networking, and system administration. I'm passionate about learning new technologies and staying updated with the latest trends in the industry.</p>
+            <p>Feel free to explore my portfolio and get in touch if you have any questions or opportunities for collaboration.</p>
+        </section>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="achievement">
+                <h3>Certified Coder</h3>
+                <p>I am a certified coder from WhiteHat Jr, where I have learned coding skills and developed various projects, including web applications, games, and animations.</p>
+            </div>
+            <div class="achievement">
+                <h3>Certified Game Developer</h3>
+                <p>I am also certified as a game developer from WhiteHat Jr, where I have created interactive and engaging games using platforms like Scratch, Unity, or other game development frameworks.</p>
+            </div>
+            <div class="achievement">
+                <h3>Video Editor</h3>
+                <p>During my journey, I have gained experience as a video editor, creating and editing videos for various purposes, including gaming content, tutorials, and promotional videos.</p>
+            </div>
+            <div class="achievement">
+                <h3>YouTube Channel</h3>
+                <p>As a passionate gamer and content creator, I run a YouTube channel where I share my gaming experiences, tutorials, tips, and tricks with my audience.</p>
+            </div>
+        </section>
+
+
+
+
+        <audio id="audio" src="Ed Sheeran - Take Me Back To London (feat. Stormzy) [Official Lyric Video]-audio.webm"></audio>
+        <div class="canvas-container">
+        <canvas id="equalizer" width="400" height="100"></canvas>
+        </div>
+        <button id="toggleButton" id="">Play/Pause</button>
+
+
+
+
+
+        <section id="websites">
+            <h2>My Creations</h2>
+            <div class="website">
+                <button>Website 1</button>
+                <p>A B&K theamed classic website for my school</p>
+                <a href="https://kiran-113.github.io/kedar-school/" target="_blank" class="btn">Visit Website 1</a>
+            </div>
+            <div class="website">
+                <h3>Website 2</h3>
+                <p>bueatiful yellow theamed website for maths day</p>
+                <a href=" https://kiran-113.github.io/kedar-maths/" target="_blank" class="btn">Visit Website 2</a>
+            </div>
+            <div class="website">
+                <h3>Website 3</h3>
+                <p>bueatiful website for farewell</p>
+                <a href="https://kiran-113.github.io/farewell/" target="_blank" class="btn">Visit Website 3</a>
+            </div>
+            <div class="website">
+                <h3>Website 4</h3>
+                <p>Fatastic website for annual day</p>
+                <a href=" https://kiran-113.github.io/Naryana_Annual/" target="_blank" class="btn">Visit Website 3</a>
+            </div>
+        </section>
+        
+        
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:nkvharshvardhan@gmail.com">nkvharshvardhan@gmail.com</a></p>
+                <p>Phone: <a href="tel:+919985546322">9985546322</a></p>
+            </div>
+            <div class="hire-me">
+                <h3>Hire Me</h3>
+                <p>Looking for a passionate coder, game developer, or video editor? Feel free to reach out to discuss your project requirements or collaborations.</p>
+                <p>I'm available for freelance work and excited to take on new challenges!</p>
+            </div>
+        </section>
+    </div>
+    </main>
+    <footer>
+        &copy; 2024 Your Name. All rights reserved.
+    </footer>
+
+
+
+
+    <script>
+
+var audio = document.getElementById("audio");
+var toggleButton = document.getElementById("toggleButton");
+
+toggleButton.addEventListener("click", function() {
+    if (audio.paused) {
+        audio.play();
+        toggleButton.textContent = "Pause";
+    } else {
+        audio.pause();
+        toggleButton.textContent = "Play";
+    }
+});
+
+
+
+        // Get the audio element and canvas
+var audio = document.getElementById("audio");
+var canvas = document.getElementById("equalizer");
+var ctx = canvas.getContext("2d");
+
+// Create the analyser node
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+var analyser = audioCtx.createAnalyser();
+var source = audioCtx.createMediaElementSource(audio);
+source.connect(analyser);
+analyser.connect(audioCtx.destination);
+
+// Set up the analyser
+analyser.fftSize = 256;
+var bufferLength = analyser.frequencyBinCount;
+var dataArray = new Uint8Array(bufferLength);
+
+// Draw the equalizer
+function drawEqualizer() {
+    requestAnimationFrame(drawEqualizer);
+
+    analyser.getByteFrequencyData(dataArray);
+
+    ctx.fillStyle = "black";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    var barWidth = (canvas.width / bufferLength) * 2.5;
+    var barHeight;
+    var x = 0;
+
+    for(var i = 0; i < bufferLength; i++) {
+        barHeight = dataArray[i] / 2;
+
+        ctx.fillStyle = "rgb(" + (barHeight + 100) + ",50,50)";
+        ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+
+        x += barWidth + 1;
+    }
+}
+
+// Start drawing the equalizer
+drawEqualizer();
+
+// Play the audio
+audio.play();
+
+
+    </script>
+</body>
+</html>
